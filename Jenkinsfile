@@ -27,7 +27,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "winscp -i \Users\Zsolt_Nyerges\Downloads\AWS\Keypairs\tomcat-demo.pem **/target/*.war centos@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        bat "winscp -i /Users/Zsolt_Nyerges/Downloads/AWS/Keypairs/tomcat-demo.pem **/target/*.war centos@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 
